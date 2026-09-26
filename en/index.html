@@ -131,11 +131,11 @@
     </div>
 
     <div class="form-card">
-      <p class="alert alert-ok" role="status" hidden>Done! Your e-mail app has opened with your message – press Send there.</p>
+      <p class="alert alert-ok" role="status" hidden>Thank you! Your message has been received – we will be in touch soon.</p>
 
-      <form method="post" action="mailto:tomsta61@gmail.com"
-            enctype="text/plain"
-            data-mailto="tomsta61@gmail.com" data-subject="Trollservice – contact form">
+      <form method="post" action="https://formsubmit.co/tomsta61@gmail.com" data-ajax>
+        <input type="hidden" name="_subject" value="Trollservice – contact form">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
 
         <div class="field">
           <label for="namn">Name</label>
@@ -173,26 +173,24 @@
     </div>
   </footer>
   <script>
-    /* Open the visitor's e-mail app with the message pre-filled.
-       Static site: no backend, the mail client does the sending. */
-    document.querySelectorAll('form[data-mailto]').forEach(function (f) {
+    /* Submit to FormSubmit's ajax endpoint and show the page's own success
+       message; fall back to a plain POST if fetch fails. */
+    document.querySelectorAll('form[data-ajax]').forEach(function (f) {
       f.addEventListener('submit', function (e) {
         e.preventDefault();
         if (!f.checkValidity()) { f.reportValidity(); return; }
-        var val = function (n) {
-          var el = f.querySelector('[name="' + n + '"]');
-          return el ? el.value.trim() : '';
-        };
-        var body = 'Name: ' + val('namn') + '\n' +
-                   'Email: ' + val('epost') + '\n\n' +
-                   val('meddelande');
-        var href = 'mailto:' + f.dataset.mailto +
-                   '?subject=' + encodeURIComponent(f.dataset.subject || 'Trollservice') +
-                   '&body=' + encodeURIComponent(body);
-        var ok = document.querySelector('.alert-ok');
-        if (ok) ok.hidden = false;
-        window.location.href = href;
-        f.reset();
+        var btn = f.querySelector('button[type="submit"]');
+        var url = f.action.replace('formsubmit.co/', 'formsubmit.co/ajax/');
+        if (btn) btn.disabled = true;
+        fetch(url, { method: 'POST', body: new FormData(f), headers: { 'Accept': 'application/json' } })
+          .then(function (r) {
+            if (!r.ok) throw new Error('submit failed');
+            var ok = document.querySelector('.alert-ok');
+            if (ok) ok.hidden = false;
+            f.reset();
+          })
+          .catch(function () { f.submit(); })
+          .then(function () { if (btn) btn.disabled = false; });
       });
     });
   </script>

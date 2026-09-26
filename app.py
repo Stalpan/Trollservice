@@ -7,9 +7,6 @@ from translations import TRANSLATIONS
 
 app = Flask(__name__)
 
-# Where the contact form's mailto: opens the visitor's e-mail app.
-app.config["CONTACT_EMAIL"] = "tomsta61@gmail.com"
-
 
 def render_page(lang, sent=False, errors=None, form=None):
     return render_template(

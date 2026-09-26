@@ -88,9 +88,9 @@
     <div class="form-card">
       <p class="alert alert-ok" role="status"{% if not sent %} hidden{% endif %}>{{ t.sent }}</p>
 
-      <form method="post" action="mailto:{{ config.CONTACT_EMAIL }}"
-            enctype="text/plain"
-            data-mailto="{{ config.CONTACT_EMAIL }}" data-subject="{{ t.form.subject }}">
+      <form method="post" action="https://formsubmit.co/tomsta61@gmail.com" data-ajax>
+        <input type="hidden" name="_subject" value="{{ t.form.subject }}">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
 
         <div class="field">
           <label for="namn">{{ t.form.name }}</label>

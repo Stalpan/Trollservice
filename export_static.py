@@ -10,8 +10,8 @@ Renders the Flask templates to plain HTML and copies the root assets:
   favicon.png, logo-mark.png, logo-full.png   from static/img/
   .nojekyll         skip Jekyll processing on GitHub Pages
 
-The exported form opens the visitor's e-mail app via mailto: with
-browser-side validation – same behaviour as the Flask dev site.
+The exported form posts straight to FormSubmit (tomsta61@gmail.com)
+with browser-side validation + an AJAX success message.
 
 Run after any copy/CSS/template change:
 

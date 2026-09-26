@@ -92,7 +92,7 @@ TRANSLATIONS = {
             "email": "Ange en giltig e-postadress.",
             "message": "Skriv ett meddelande på minst 10 tecken.",
         },
-        "sent": "Klart! Ditt e-postprogram har öppnats med meddelandet – tryck Skicka där.",
+        "sent": "Tack! Ditt meddelande har tagits emot – vi hör av oss snart.",
         "footer": {
             "note": "Trädgårdsskötsel · Husfix · Högsby",
             "rights": "Allt innehåll © 2026 Trollservice.",
@@ -188,7 +188,7 @@ TRANSLATIONS = {
             "email": "Please enter a valid email address.",
             "message": "Please write a message of at least 10 characters.",
         },
-        "sent": "Done! Your e-mail app has opened with your message – press Send there.",
+        "sent": "Thank you! Your message has been received – we will be in touch soon.",
         "footer": {
             "note": "Garden care · Home fixes · Högsby",
             "rights": "All content © 2026 Trollservice.",
