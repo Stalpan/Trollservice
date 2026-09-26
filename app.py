@@ -1,19 +1,14 @@
 # -*- coding: utf-8 -*-
 """Trollservice – single-page landing site (Flask + HTML/CSS)."""
 
-import re
-from datetime import datetime
-from pathlib import Path
-
-from flask import Flask, abort, redirect, render_template, request, send_from_directory
+from flask import Flask, abort, render_template, request, send_from_directory
 
 from translations import TRANSLATIONS
 
 app = Flask(__name__)
 
-BASE_DIR = Path(__file__).resolve().parent
-LOG_FILE = BASE_DIR / "messages.log"
-EMAIL_RE = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
+# Where the contact form's mailto: opens the visitor's e-mail app.
+app.config["CONTACT_EMAIL"] = "tomsta61@gmail.com"
 
 
 def render_page(lang, sent=False, errors=None, form=None):
@@ -52,39 +47,6 @@ def root_image(name):
     if name not in _ROOT_IMAGES:
         abort(404)
     return send_from_directory(app.static_folder, f"img/{name}.png")
-
-
-@app.post("/kontakt")
-def kontakt():
-    lang = request.form.get("lang", "sv")
-    if lang not in TRANSLATIONS:
-        lang = "sv"
-
-    form = {
-        "namn": request.form.get("namn", "").strip(),
-        "epost": request.form.get("epost", "").strip(),
-        "meddelande": request.form.get("meddelande", "").strip(),
-    }
-
-    err = TRANSLATIONS[lang]["errors"]
-    errors = {}
-    if not form["namn"]:
-        errors["namn"] = err["name"]
-    if not EMAIL_RE.match(form["epost"]):
-        errors["epost"] = err["email"]
-    if len(form["meddelande"]) < 10:
-        errors["meddelande"] = err["message"]
-
-    if errors:
-        return render_page(lang, errors=errors, form=form)
-
-    stamp = datetime.now().isoformat(timespec="seconds")
-    with LOG_FILE.open("a", encoding="utf-8") as fh:
-        fh.write(
-            f"{stamp} | {lang} | {form['namn']} | {form['epost']} | {form['meddelande']}\n"
-        )
-
-    return redirect(("/en" if lang == "en" else "/") + "?sent=1#kontakt")
 
 
 @app.errorhandler(404)

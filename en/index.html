@@ -127,42 +127,30 @@
           <span class="fact-label">Phone</span>
           <span class="fact-value fact-muted">Coming soon</span>
         </li>
-        <li>
-          <span class="fact-label">Email</span>
-          <span class="fact-value fact-muted">Coming soon</span>
-        </li>
       </ul>
     </div>
 
     <div class="form-card">
-      <p class="alert alert-ok" role="status" hidden>Thank you! Your message has been received – we will be in touch soon.</p>
+      <p class="alert alert-ok" role="status" hidden>Done! Your e-mail app has opened with your message – press Send there.</p>
 
-      <form method="post" action="https://formsubmit.co/tomsta61@gmail.com"
-            data-ajax>
-        <input type="hidden" name="lang" value="en">
-        <input type="hidden" name="_subject" value="Trollservice – contact form">
-        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <form method="post" action="mailto:tomsta61@gmail.com"
+            enctype="text/plain"
+            data-mailto="tomsta61@gmail.com" data-subject="Trollservice – contact form">
 
         <div class="field">
           <label for="namn">Name</label>
-          <input type="text" id="namn" name="namn" value=""
-                 autocomplete="name" required >
-          
+          <input type="text" id="namn" name="namn" autocomplete="name" required>
         </div>
 
         <div class="field">
           <label for="epost">Email</label>
-          <input type="email" id="epost" name="epost" value=""
-                 autocomplete="email" required >
-          
+          <input type="email" id="epost" name="epost" autocomplete="email" required>
         </div>
 
         <div class="field">
           <label for="meddelande">Message</label>
           <textarea id="meddelande" name="meddelande" rows="5"
-                    placeholder="Tell us what you would like help with …" required minlength="10"
-                    ></textarea>
-          
+                    placeholder="Tell us what you would like help with …" required minlength="10"></textarea>
         </div>
 
         <button class="btn btn-primary btn-block" type="submit">Send message</button>
@@ -184,28 +172,29 @@
       <p class="footer-rights">All content © 2026 Trollservice.</p>
     </div>
   </footer>
-  
   <script>
-    /* Static build: submit to FormSubmit's ajax endpoint and show the page's
-       own success message; fall back to a plain POST if fetch fails. */
-    document.querySelectorAll('form[data-ajax]').forEach(function (f) {
+    /* Open the visitor's e-mail app with the message pre-filled.
+       Static site: no backend, the mail client does the sending. */
+    document.querySelectorAll('form[data-mailto]').forEach(function (f) {
       f.addEventListener('submit', function (e) {
         e.preventDefault();
-        var btn = f.querySelector('button[type="submit"]');
-        var url = f.action.replace('formsubmit.co/', 'formsubmit.co/ajax/');
-        if (btn) btn.disabled = true;
-        fetch(url, { method: 'POST', body: new FormData(f), headers: { 'Accept': 'application/json' } })
-          .then(function (r) {
-            if (!r.ok) throw new Error('submit failed');
-            var ok = document.querySelector('.alert-ok');
-            if (ok) ok.hidden = false;
-            f.reset();
-          })
-          .catch(function () { f.submit(); })
-          .then(function () { if (btn) btn.disabled = false; });
+        if (!f.checkValidity()) { f.reportValidity(); return; }
+        var val = function (n) {
+          var el = f.querySelector('[name="' + n + '"]');
+          return el ? el.value.trim() : '';
+        };
+        var body = 'Name: ' + val('namn') + '\n' +
+                   'Email: ' + val('epost') + '\n\n' +
+                   val('meddelande');
+        var href = 'mailto:' + f.dataset.mailto +
+                   '?subject=' + encodeURIComponent(f.dataset.subject || 'Trollservice') +
+                   '&body=' + encodeURIComponent(body);
+        var ok = document.querySelector('.alert-ok');
+        if (ok) ok.hidden = false;
+        window.location.href = href;
+        f.reset();
       });
     });
   </script>
-  
 </body>
 </html>

@@ -77,8 +77,6 @@ TRANSLATIONS = {
             "lead": "Berätta vad du behöver hjälp med så återkommer vi med en offert.",
             "phone_label": "Telefon",
             "phone": "Kommer snart",
-            "email_label": "E-post",
-            "email": "Kommer snart",
         },
         "form": {
             "name": "Namn",
@@ -86,6 +84,7 @@ TRANSLATIONS = {
             "message": "Meddelande",
             "message_placeholder": "Beskriv gärna vad du vill ha hjälp med …",
             "submit": "Skicka meddelande",
+            "subject": "Trollservice – kontaktformulär",
             "note": "Vi svarar vanligtvis inom ett par dagar.",
         },
         "errors": {
@@ -93,7 +92,7 @@ TRANSLATIONS = {
             "email": "Ange en giltig e-postadress.",
             "message": "Skriv ett meddelande på minst 10 tecken.",
         },
-        "sent": "Tack! Ditt meddelande har tagits emot – vi hör av oss snart.",
+        "sent": "Klart! Ditt e-postprogram har öppnats med meddelandet – tryck Skicka där.",
         "footer": {
             "note": "Trädgårdsskötsel · Husfix · Högsby",
             "rights": "Allt innehåll © 2026 Trollservice.",
@@ -174,8 +173,6 @@ TRANSLATIONS = {
             "lead": "Tell us what you need help with and we will get back to you with a quote.",
             "phone_label": "Phone",
             "phone": "Coming soon",
-            "email_label": "Email",
-            "email": "Coming soon",
         },
         "form": {
             "name": "Name",
@@ -183,6 +180,7 @@ TRANSLATIONS = {
             "message": "Message",
             "message_placeholder": "Tell us what you would like help with …",
             "submit": "Send message",
+            "subject": "Trollservice – contact form",
             "note": "We usually reply within a couple of days.",
         },
         "errors": {
@@ -190,7 +188,7 @@ TRANSLATIONS = {
             "email": "Please enter a valid email address.",
             "message": "Please write a message of at least 10 characters.",
         },
-        "sent": "Thank you! Your message has been received – we will be in touch soon.",
+        "sent": "Done! Your e-mail app has opened with your message – press Send there.",
         "footer": {
             "note": "Garden care · Home fixes · Högsby",
             "rights": "All content © 2026 Trollservice.",

@@ -10,9 +10,8 @@ Renders the Flask templates to plain HTML and copies the root assets:
   favicon.png, logo-mark.png, logo-full.png   from static/img/
   .nojekyll         skip Jekyll processing on GitHub Pages
 
-The exported form posts straight to FormSubmit (tomsta61@gmail.com) with
-browser-side validation + an AJAX success message; the Flask dev site keeps
-posting to /kontakt with its own validation and messages.log.
+The exported form opens the visitor's e-mail app via mailto: with
+browser-side validation – same behaviour as the Flask dev site.
 
 Run after any copy/CSS/template change:
 
@@ -25,7 +24,6 @@ from pathlib import Path
 from app import app
 
 BASE = Path(__file__).resolve().parent
-FORM_EMAIL = "tomsta61@gmail.com"
 PAGES = {
     "index.html": "/",        # Swedish
     "en/index.html": "/en",   # English
@@ -35,11 +33,6 @@ ROOT_ASSETS = ("favicon.png", "logo-mark.png", "logo-full.png")
 
 
 def main():
-    # Static build: form goes straight to FormSubmit, browser validates.
-    app.config.update(
-        FORM_ACTION=f"https://formsubmit.co/{FORM_EMAIL}",
-        SERVER_VALIDATION=False,
-    )
     client = app.test_client()
     for rel, url in PAGES.items():
         resp = client.get(url)
