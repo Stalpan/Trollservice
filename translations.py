@@ -4,10 +4,10 @@
 TRANSLATIONS = {
     "sv": {
         "meta": {
-            "title": "Trollservice – Skötsel av grönytor i Högsby",
+            "title": "Trollservice – Trädgårdsskötsel & husfix i Högsby",
             "description": (
-                "Trollservice i Högsby: skötsel och underhåll av grönytor – "
-                "klippning, beskärning, röjning och bortforsling av trädgårdsavfall."
+                "Trollservice i Högsby: skötsel av grönytor och mindre husfix – "
+                "klippning, beskärning, röjning, målning och småfix inne och ute."
             ),
         },
         "brand": "Trollservice",
@@ -20,7 +20,7 @@ TRANSLATIONS = {
             "title": "Trygg hjälp för din trädgård",
             "sub": (
                 "Trollservice är ett lokalt företag som tar hand om din trädgård "
-                "året om – snabbt, personligt och till ett schysst pris."
+                "och ditt hus – snabbt, personligt och till ett schysst pris."
             ),
             "cta": "Begär offert",
             "cta2": "Se tjänster",
@@ -28,29 +28,28 @@ TRANSLATIONS = {
         },
         "services": {
             "title": "Våra tjänster",
-            "lead": "Skötsel, större jobb och husfix – samma hantverk, samma omsorg.",
+            "lead": "Trädgårdsskötsel och husfix – samma hantverk, samma omsorg.",
             "entries": [
                 {
-                    "title": "Löpande skötsel",
-                    "text": "Återkommande skötsel på schemalagda tider – så håller trädgården sig fin hela säsongen.",
+                    "title": "Trädgårdsskötsel",
+                    "text": "Allt med trädgården – från löpande skötsel till större jobb, hela säsongen.",
                     "bullets": [
                         "Gräsklippning och kantklippning",
                         "Häckklippning",
-                        "Lukning av rabatter och gräsytor",
+                        "Beskärning av buskar och träd",
                         "Plantering och plantvård",
+                        "Röjning och kapning",
+                        "Bortforsling av trädgårdsavfall",
                     ],
                 },
                 {
-                    "title": "Större uppdrag & husfix",
-                    "text": "När jobbet är för stort för en vanlig rund – och småfixet inne och ute hinner aldrig.",
+                    "title": "Husfix – inne & ute",
+                    "text": "Småfixet som det inte blir tid till – vi reparerar, målar och servar, inne och ute.",
                     "bullets": [
-                        "Vårstädning och höststädning",
-                        "Beskärning av buskar och träd",
-                        "Röjning och kapning",
-                        "Bortforsling av trädgårdsavfall",
                         "Altantvätt och rengöring utomhus",
                         "Mindre målningsarbeten",
                         "Service och reparation av gräsklippare",
+                        "Montering av möbler och hyllor",
                         "Småfix inne i hemmet",
                     ],
                 },
@@ -64,7 +63,7 @@ TRANSLATIONS = {
             "title": "Lokalt företag, personlig service",
             "text": (
                 "Trollservice är en enskild firma som startade hösten 2025 i Högsby. "
-                "Verksamheten bedriver skötsel och underhåll av grönytor. "
+                "Verksamheten utför trädgårdsskötsel och mindre husfix, inne och ute. "
                 "Du pratar alltid direkt med den som gör jobbet – inga mellanhänder, "
                 "inga överraskningar."
             ),
@@ -96,16 +95,16 @@ TRANSLATIONS = {
         },
         "sent": "Tack! Ditt meddelande har tagits emot – vi hör av oss snart.",
         "footer": {
-            "note": "Löpande skötsel · Större uppdrag · Husfix · Högsby",
+            "note": "Trädgårdsskötsel · Husfix · Högsby",
             "rights": "Allt innehåll © 2026 Trollservice.",
         },
     },
     "en": {
         "meta": {
-            "title": "Trollservice – Garden care in Högsby",
+            "title": "Trollservice – Garden care & home fixes in Högsby",
             "description": (
-                "Trollservice in Högsby: care and maintenance of green spaces – "
-                "mowing, pruning, clearing and removal of garden waste."
+                "Trollservice in Högsby: garden care and home fixes – "
+                "mowing, pruning, clearing, small painting jobs and repairs, indoors and out."
             ),
         },
         "brand": "Trollservice",
@@ -118,7 +117,7 @@ TRANSLATIONS = {
             "title": "Reliable help for your garden",
             "sub": (
                 "Trollservice is a local business that looks after your garden "
-                "all year round – quick, personal service at a fair price."
+                "and your home – quick, personal service at a fair price."
             ),
             "cta": "Request a quote",
             "cta2": "See services",
@@ -126,45 +125,44 @@ TRANSLATIONS = {
         },
         "services": {
             "title": "Our services",
-            "lead": "Garden care, bigger jobs and home fixes – same craft, same care.",
+            "lead": "Garden care and home fixes – same craft, same care.",
             "entries": [
                 {
-                    "title": "Ongoing care",
-                    "text": "Regular, scheduled visits – your garden stays tidy all season.",
+                    "title": "Garden care",
+                    "text": "Everything for your garden – from routine care to bigger jobs, all season long.",
                     "bullets": [
                         "Lawn mowing and edging",
                         "Hedge trimming",
-                        "Weeding of borders and lawns",
+                        "Pruning of shrubs and trees",
                         "Planting and plant care",
+                        "Clearing and felling",
+                        "Removal of garden waste",
                     ],
                 },
                 {
-                    "title": "Bigger jobs & home fixes",
-                    "text": "When the job is bigger than a routine visit – and the small fixes never get done.",
+                    "title": "Home fixes, indoors & out",
+                    "text": "The small jobs that never get done – we repair, paint and service, indoors and out.",
                     "bullets": [
-                        "Spring and autumn clean-up",
-                        "Pruning of shrubs and trees",
-                        "Clearing and felling",
-                        "Removal of garden waste",
                         "Deck washing and outdoor cleaning",
                         "Small painting jobs",
                         "Lawnmower service and repair",
+                        "Furniture and shelf assembly",
                         "Small fixes indoors",
                     ],
                 },
             ],
             "tax": {
                 "title": "ROT & RUT tax deductions",
-                "text": "We deduct it directly on the invoice and file with the Swedish Tax Agency.",
+                "text": "We apply the deduction directly on the invoice and file it with the Swedish Tax Agency.",
             },
         },
         "about": {
             "title": "Local business, personal service",
             "text": (
                 "Trollservice is a sole proprietorship founded in autumn 2025 in "
-                "Högsby. The business covers care and maintenance of green spaces. "
-                "You always talk directly to the person doing the work – no "
-                "middlemen, no surprises."
+                "Högsby. The business covers garden care and small home fixes, "
+                "indoors and out. You always talk directly to the person doing "
+                "the work – no middlemen, no surprises."
             ),
             "facts": [
                 {"label": "Founded", "value": "2025"},
@@ -194,7 +192,7 @@ TRANSLATIONS = {
         },
         "sent": "Thank you! Your message has been received – we will be in touch soon.",
         "footer": {
-            "note": "Garden care · Bigger jobs · Home fixes · Högsby",
+            "note": "Garden care · Home fixes · Högsby",
             "rights": "All content © 2026 Trollservice.",
         },
     },
