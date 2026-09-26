@@ -65,7 +65,7 @@ TRANSLATIONS = {
                 "Trollservice är en enskild firma som startade hösten 2025 i Högsby. "
                 "Verksamheten utför trädgårdsskötsel och mindre husfix, inne och ute. "
                 "Du pratar alltid direkt med den som gör jobbet – inga mellanhänder, "
-                "inga överraskningar."
+                "inga överraskningar. Välkommen! /Tomas"
             ),
             "facts": [
                 {"label": "Grundad", "value": "2025"},
@@ -161,7 +161,7 @@ TRANSLATIONS = {
                 "Trollservice is a sole proprietorship founded in autumn 2025 in "
                 "Högsby. The business covers garden care and small home fixes, "
                 "indoors and out. You always talk directly to the person doing "
-                "the work – no middlemen, no surprises."
+                "the work – no middlemen, no surprises. Welcome! /Tomas"
             ),
             "facts": [
                 {"label": "Founded", "value": "2025"},
