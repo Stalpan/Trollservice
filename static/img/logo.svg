@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Trollservice">
+  <!-- ears -->
+  <path d="M14 32 L3 17 L20 21 Z" fill="#2A7C13"/>
+  <path d="M50 32 L61 17 L44 21 Z" fill="#2A7C13"/>
+  <!-- head -->
+  <path d="M32 10c12.7 0 21.5 8.6 21.5 21S44.7 54 32 54 10.5 43.4 10.5 31 19.3 10 32 10Z" fill="#2A7C13"/>
+  <!-- eyes -->
+  <circle cx="24.5" cy="31" r="5.4" fill="#FFF8CF"/>
+  <circle cx="39.5" cy="31" r="5.4" fill="#FFF8CF"/>
+  <circle cx="25.8" cy="32.2" r="2.3" fill="#1e2b18"/>
+  <circle cx="40.8" cy="32.2" r="2.3" fill="#1e2b18"/>
+  <!-- smile -->
+  <path d="M25 42.5c4.2 4 9.8 4 14 0" fill="none" stroke="#76C457" stroke-width="3.2" stroke-linecap="round"/>
+  <!-- sprout -->
+  <path d="M32 10c0-4.5 3.6-8 8.4-8.6C40.6 6.4 38 10.8 32 13.4Z" fill="#76C457"/>
+  <path d="M32 10c-.4-3.4-2.6-6-6.2-7 .2 3.9 2.2 6.4 6.2 7Z" fill="#76C457"/>
+</svg>
