@@ -1,51 +1,59 @@
 <!doctype html>
-<html lang="{{ lang }}">
+<html lang="sv">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ t.meta.title }}</title>
-  <meta name="description" content="{{ t.meta.description }}">
+  <title>Trollservice – Skötsel av grönytor i Högsby</title>
+  <meta name="description" content="Trollservice i Högsby: skötsel och underhåll av grönytor – klippning, beskärning, röjning och bortforsling av trädgårdsavfall.">
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <a class="skip-link" href="#innehall">{{ t.skip }}</a>
+  <a class="skip-link" href="#innehall">Hoppa till innehåll</a>
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="{{ url_for('index' if lang == 'sv' else 'index_en') }}">
+      <a class="brand" href="/">
         <span class="brand-badge"><img class="brand-mark" src="/logo-mark.png" alt="" width="62" height="59"></span>
-        <span class="brand-name">{{ t.brand }}</span>
+        <span class="brand-name">Trollservice</span>
       </a>
 
-      <nav class="site-nav" aria-label="{{ t.nav_label }}">
-        <a href="#tjanster">{{ t.nav.services }}</a>
-        <a href="#om-oss">{{ t.nav.about }}</a>
-        <a href="#kontakt">{{ t.nav.contact }}</a>
+      <nav class="site-nav" aria-label="Huvudmeny">
+        <a href="#tjanster">Tjänster</a>
+        <a href="#om-oss">Om oss</a>
+        <a href="#kontakt">Kontakt</a>
       </nav>
 
-      <div class="lang-switch" role="group" aria-label="{{ t.lang.label }}">
-        <a href="{{ url_for('index') }}" class="{% if lang == 'sv' %}is-active{% endif %}" lang="sv" hreflang="sv">SV</a>
-        <a href="{{ url_for('index_en') }}" class="{% if lang == 'en' %}is-active{% endif %}" lang="en" hreflang="en">EN</a>
+      <div class="lang-switch" role="group" aria-label="Språk">
+        <a href="/" class="is-active" lang="sv" hreflang="sv">SV</a>
+        <a href="/en" class="" lang="en" hreflang="en">EN</a>
       </div>
     </div>
   </header>
 
   <main id="innehall">
-    {% block content %}{% endblock %}
+    
+<section class="section section-alt">
+  <div class="container narrow">
+    <h1>404 – Sidan finns inte</h1>
+    <p class="section-lead">The page you were looking for does not exist.</p>
+    <p><a class="btn btn-primary" href="/">Till startsidan</a></p>
+  </div>
+</section>
+
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
         <span class="brand-badge"><img class="brand-mark" src="/logo-mark.png" alt="" width="40" height="38"></span>
-        <span>{{ t.brand }}</span>
+        <span>Trollservice</span>
       </div>
-      <p class="footer-note">{{ t.footer.note }}</p>
-      <p class="footer-rights">{{ t.footer.rights }}</p>
+      <p class="footer-note">Skötsel av grönytor · Säsongsarbete &amp; röjning · Högsby</p>
+      <p class="footer-rights">Allt innehåll © 2026 Trollservice.</p>
     </div>
   </footer>
-  {% if not config.get('SERVER_VALIDATION', true) %}
+  
   <script>
     /* Static build: submit to FormSubmit's ajax endpoint and show the page's
        own success message; fall back to a plain POST if fetch fails. */
@@ -67,6 +75,6 @@
       });
     });
   </script>
-  {% endif %}
+  
 </body>
 </html>

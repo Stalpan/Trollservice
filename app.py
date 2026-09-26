@@ -5,7 +5,7 @@ import re
 from datetime import datetime
 from pathlib import Path
 
-from flask import Flask, abort, redirect, render_template, request
+from flask import Flask, abort, redirect, render_template, request, send_from_directory
 
 from translations import TRANSLATIONS
 
@@ -35,6 +35,23 @@ def index():
 @app.route("/en")
 def index_en():
     return render_page("en", sent=request.args.get("sent") == "1")
+
+
+@app.route("/style.css")
+def stylesheet():
+    """Stylesheet at the site root: referenced as /style.css in the HTML."""
+    return send_from_directory(app.static_folder, "css/style.css")
+
+
+_ROOT_IMAGES = {"favicon", "logo-mark", "logo-full"}
+
+
+@app.route("/<name>.png")
+def root_image(name):
+    """Root-level image aliases: /favicon.png, /logo-mark.png, /logo-full.png."""
+    if name not in _ROOT_IMAGES:
+        abort(404)
+    return send_from_directory(app.static_folder, f"img/{name}.png")
 
 
 @app.post("/kontakt")
