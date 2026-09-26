@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <p class="kicker">{{ t.hero.kicker }}</p>
+      <h1>{{ t.hero.title }}</h1>
+      <p class="lead">{{ t.hero.sub }}</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#kontakt">{{ t.hero.cta }}</a>
+        <a class="btn btn-ghost" href="#tjanster">{{ t.hero.cta2 }}</a>
+      </div>
+      <ul class="hero-points">
+        {% for p in t.hero.points %}<li>{{ p }}</li>{% endfor %}
+      </ul>
+    </div>
+    <img class="hero-logo" src="/logo-full.png"
+         alt="{{ t.brand }}" width="640" height="653">
+  </div>
+</section>
+
+<section class="section" id="tjanster">
+  <div class="container">
+    <h2>{{ t.services.title }}</h2>
+    <p class="section-lead">{{ t.services.lead }}</p>
+
+    <div class="cards">
+      {% for item in t.services.entries %}
+      <article class="card">
+        <span class="card-icon" aria-hidden="true">
+          {% if loop.first %}
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M11 20A7 7 0 0 1 4 13c0-5 4-9 9-10 0 6-1 12-2 17Z"></path>
+            <path d="M11 20c1-4 3-7 6-9"></path>
+          </svg>
+          {% else %}
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.7 6.3a4 4 0 0 0 5.3 5.3l-8.4 8.4a2.8 2.8 0 0 1-4-4l8.4-8.4a4 4 0 0 0-1.3-1.3Z"></path>
+            <path d="M14.7 6.3 18 3l3 3-3.3 3.3"></path>
+          </svg>
+          {% endif %}
+        </span>
+        <h3>{{ item.title }}</h3>
+        <p class="card-text">{{ item.text }}</p>
+        <ul class="check-list">
+          {% for bullet in item.bullets %}<li>{{ bullet }}</li>{% endfor %}
+        </ul>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="om-oss">
+  <div class="container about-grid">
+    <div>
+      <h2>{{ t.about.title }}</h2>
+      <p class="section-lead">{{ t.about.text }}</p>
+    </div>
+    <ul class="fact-list">
+      {% for fact in t.about.facts %}
+      <li><span class="fact-label">{{ fact.label }}</span><span class="fact-value">{{ fact.value }}</span></li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="kontakt">
+  <div class="container contact-grid">
+    <div>
+      <h2>{{ t.contact.title }}</h2>
+      <p class="section-lead">{{ t.contact.lead }}</p>
+
+      <ul class="contact-list">
+        <li>
+          <span class="fact-label">{{ t.contact.phone_label }}</span>
+          <span class="fact-value fact-muted">{{ t.contact.phone }}</span>
+        </li>
+        <li>
+          <span class="fact-label">{{ t.contact.email_label }}</span>
+          <span class="fact-value fact-muted">{{ t.contact.email }}</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="form-card">
+      <p class="alert alert-ok" role="status"{% if not sent %} hidden{% endif %}>{{ t.sent }}</p>
+
+      <form method="post" action="{{ config.get('FORM_ACTION', '/kontakt') }}"
+            {% if config.get('SERVER_VALIDATION', true) %}novalidate{% else %}data-ajax{% endif %}>
+        <input type="hidden" name="lang" value="{{ lang }}">
+        <input type="hidden" name="_subject" value="Trollservice – {% if lang == 'en' %}contact form{% else %}kontaktformulär{% endif %}">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <div class="field">
+          <label for="namn">{{ t.form.name }}</label>
+          <input type="text" id="namn" name="namn" value="{{ form.get('namn', '') }}"
+                 autocomplete="name" required {% if errors.namn %}aria-invalid="true" aria-describedby="namn-err"{% endif %}>
+          {% if errors.namn %}<p class="field-error" id="namn-err">{{ errors.namn }}</p>{% endif %}
+        </div>
+
+        <div class="field">
+          <label for="epost">{{ t.form.email }}</label>
+          <input type="email" id="epost" name="epost" value="{{ form.get('epost', '') }}"
+                 autocomplete="email" required {% if errors.epost %}aria-invalid="true" aria-describedby="epost-err"{% endif %}>
+          {% if errors.epost %}<p class="field-error" id="epost-err">{{ errors.epost }}</p>{% endif %}
+        </div>
+
+        <div class="field">
+          <label for="meddelande">{{ t.form.message }}</label>
+          <textarea id="meddelande" name="meddelande" rows="5"
+                    placeholder="{{ t.form.message_placeholder }}" required minlength="10"
+                    {% if errors.meddelande %}aria-invalid="true" aria-describedby="meddelande-err"{% endif %}>{{ form.get('meddelande', '') }}</textarea>
+          {% if errors.meddelande %}<p class="field-error" id="meddelande-err">{{ errors.meddelande }}</p>{% endif %}
+        </div>
+
+        <button class="btn btn-primary btn-block" type="submit">{{ t.form.submit }}</button>
+        <p class="form-note">{{ t.form.note }}</p>
+      </form>
+    </div>
+  </div>
+</section>
+{% endblock %}
