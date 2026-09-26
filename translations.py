@@ -41,19 +41,13 @@ TRANSLATIONS = {
                     ],
                 },
                 {
-                    "title": "Större uppdrag",
-                    "text": "När jobbet är för stort för en vanlig rund – vi röjar, kapar och tar bort avfallet.",
+                    "title": "Större uppdrag & husfix",
+                    "text": "När jobbet är för stort för en vanlig rund – och småfixet inne och ute hinner aldrig.",
                     "bullets": [
                         "Vårstädning och höststädning",
                         "Beskärning av buskar och träd",
                         "Röjning och kapning",
                         "Bortforsling av trädgårdsavfall",
-                    ],
-                },
-                {
-                    "title": "Husfix – inne & ute",
-                    "text": "Småfixet som det inte blir tid till – vi lagar, målar och servar, inne och ute.",
-                    "bullets": [
                         "Altantvätt och rengöring utomhus",
                         "Mindre målningsarbeten",
                         "Service och reparation av gräsklippare",
@@ -145,19 +139,13 @@ TRANSLATIONS = {
                     ],
                 },
                 {
-                    "title": "Bigger jobs",
-                    "text": "When the job is bigger than a routine visit – we clear, cut and remove the waste.",
+                    "title": "Bigger jobs & home fixes",
+                    "text": "When the job is bigger than a routine visit – and the small fixes never get done.",
                     "bullets": [
                         "Spring and autumn clean-up",
                         "Pruning of shrubs and trees",
                         "Clearing and felling",
                         "Removal of garden waste",
-                    ],
-                },
-                {
-                    "title": "Home fixes, indoors & out",
-                    "text": "The small jobs that never get done – we repair, paint and service, indoors and out.",
-                    "bullets": [
                         "Deck washing and outdoor cleaning",
                         "Small painting jobs",
                         "Lawnmower service and repair",

@@ -538,14 +538,6 @@ a { color: var(--green-dark); }
   .contact-grid { grid-template-columns: 1fr 1.1fr; align-items: start; }
 }
 
-@media (min-width: 760px) and (max-width: 1023px) {
-  .cards > .card:last-child { grid-column: 1 / -1; }
-}
-
-@media (min-width: 1024px) {
-  .cards { grid-template-columns: repeat(3, 1fr); }
-}
-
 @media (max-width: 560px) {
   .header-inner { justify-content: center; }
   .brand { margin-right: 0; width: 100%; justify-content: center; }
