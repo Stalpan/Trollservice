@@ -28,29 +28,43 @@ TRANSLATIONS = {
         },
         "services": {
             "title": "Våra tjänster",
-            "lead": "Två verksamhetsområden, samma hantverk: ordning och omsorg.",
+            "lead": "Skötsel, större jobb och husfix – samma hantverk, samma omsorg.",
             "entries": [
                 {
-                    "title": "Skötsel & underhåll av grönytor",
-                    "text": "Vi håller din trädgård snygg året om – med löpande skötsel och omsorg.",
+                    "title": "Löpande skötsel",
+                    "text": "Återkommande skötsel på schemalagda tider – så håller trädgården sig fin hela säsongen.",
                     "bullets": [
-                        "Klippning av gräs och häck",
-                        "Regelbunden trädgårdsskötsel",
-                        "Beskärning av buskar och träd",
+                        "Gräsklippning och kantklippning",
+                        "Häckklippning",
+                        "Lukning av rabatter och gräsytor",
                         "Plantering och plantvård",
                     ],
                 },
                 {
-                    "title": "Säsongsarbete & röjning",
-                    "text": "Större jobb inför säsong – vi röjar, städar och tar bort avfallet.",
+                    "title": "Större uppdrag",
+                    "text": "När jobbet är för stort för en vanlig rund – vi röjar, kapar och tar bort avfallet.",
                     "bullets": [
                         "Vårstädning och höststädning",
-                        "Röjning av buskar och högt gräs",
-                        "Kapning av träd och större buskar",
+                        "Beskärning av buskar och träd",
+                        "Röjning och kapning",
                         "Bortforsling av trädgårdsavfall",
                     ],
                 },
+                {
+                    "title": "Husfix – inne & ute",
+                    "text": "Småfixet som det inte blir tid till – vi lagar, målar och servar, inne och ute.",
+                    "bullets": [
+                        "Altantvätt och rengöring utomhus",
+                        "Mindre målningsarbeten",
+                        "Service och reparation av gräsklippare",
+                        "Småfix inne i hemmet",
+                    ],
+                },
             ],
+            "tax": {
+                "title": "ROT- och RUT-avdrag",
+                "text": "Vi drar av avdraget direkt på fakturan och skickar in till Skatteverket.",
+            },
         },
         "about": {
             "title": "Lokalt företag, personlig service",
@@ -88,7 +102,7 @@ TRANSLATIONS = {
         },
         "sent": "Tack! Ditt meddelande har tagits emot – vi hör av oss snart.",
         "footer": {
-            "note": "Skötsel av grönytor · Säsongsarbete & röjning · Högsby",
+            "note": "Löpande skötsel · Större uppdrag · Husfix · Högsby",
             "rights": "Allt innehåll © 2026 Trollservice.",
         },
     },
@@ -118,29 +132,43 @@ TRANSLATIONS = {
         },
         "services": {
             "title": "Our services",
-            "lead": "Two sides of the business, one standard: careful work and tidy results.",
+            "lead": "Garden care, bigger jobs and home fixes – same craft, same care.",
             "entries": [
                 {
-                    "title": "Garden care & maintenance",
-                    "text": "We keep your garden looking good all year round – with regular, careful maintenance.",
+                    "title": "Ongoing care",
+                    "text": "Regular, scheduled visits – your garden stays tidy all season.",
                     "bullets": [
-                        "Lawn mowing and hedge trimming",
-                        "Regular garden maintenance",
-                        "Pruning of shrubs and trees",
+                        "Lawn mowing and edging",
+                        "Hedge trimming",
+                        "Weeding of borders and lawns",
                         "Planting and plant care",
                     ],
                 },
                 {
-                    "title": "Seasonal work & clearing",
-                    "text": "Bigger jobs ahead of the season – we clear, clean up and remove the waste.",
+                    "title": "Bigger jobs",
+                    "text": "When the job is bigger than a routine visit – we clear, cut and remove the waste.",
                     "bullets": [
                         "Spring and autumn clean-up",
-                        "Clearing of bushes and tall grass",
-                        "Cutting of trees and larger bushes",
+                        "Pruning of shrubs and trees",
+                        "Clearing and felling",
                         "Removal of garden waste",
                     ],
                 },
+                {
+                    "title": "Home fixes, indoors & out",
+                    "text": "The small jobs that never get done – we repair, paint and service, indoors and out.",
+                    "bullets": [
+                        "Deck washing and outdoor cleaning",
+                        "Small painting jobs",
+                        "Lawnmower service and repair",
+                        "Small fixes indoors",
+                    ],
+                },
             ],
+            "tax": {
+                "title": "ROT & RUT tax deductions",
+                "text": "We deduct it directly on the invoice and file with the Swedish Tax Agency.",
+            },
         },
         "about": {
             "title": "Local business, personal service",
@@ -178,7 +206,7 @@ TRANSLATIONS = {
         },
         "sent": "Thank you! Your message has been received – we will be in touch soon.",
         "footer": {
-            "note": "Garden care · Seasonal work · Högsby",
+            "note": "Garden care · Bigger jobs · Home fixes · Högsby",
             "rights": "All content © 2026 Trollservice.",
         },
     },

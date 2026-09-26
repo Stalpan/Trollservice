@@ -354,6 +354,26 @@ a { color: var(--green-dark); }
   transform: rotate(-45deg);
 }
 
+.tax-note {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .3rem 1rem;
+  margin-top: 1.6rem;
+  padding: .95rem 1.3rem;
+  background: var(--green-dark);
+  color: var(--cream);
+  border: 2px solid var(--green-light);
+  border-radius: var(--radius);
+}
+
+.tax-note strong {
+  font-size: 1.05rem;
+  white-space: nowrap;
+}
+
+.tax-note span { opacity: .88; font-weight: 600; }
+
 /* ---------- About ---------- */
 
 .about-grid,
@@ -516,6 +536,14 @@ a { color: var(--green-dark); }
   .cards { grid-template-columns: 1fr 1fr; }
   .about-grid { grid-template-columns: 1.4fr 1fr; align-items: start; }
   .contact-grid { grid-template-columns: 1fr 1.1fr; align-items: start; }
+}
+
+@media (min-width: 760px) and (max-width: 1023px) {
+  .cards > .card:last-child { grid-column: 1 / -1; }
+}
+
+@media (min-width: 1024px) {
+  .cards { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (max-width: 560px) {
