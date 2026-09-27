@@ -76,7 +76,7 @@ TRANSLATIONS = {
             "title": "Kontakta oss",
             "lead": "Berätta vad du behöver hjälp med så återkommer vi med en offert.",
             "phone_label": "Telefon",
-            "phone": "Kommer snart",
+            "phone": "070-605 69 16",
         },
         "form": {
             "name": "Namn",
@@ -172,7 +172,7 @@ TRANSLATIONS = {
             "title": "Get in touch",
             "lead": "Tell us what you need help with and we will get back to you with a quote.",
             "phone_label": "Phone",
-            "phone": "Coming soon",
+            "phone": "070-605 69 16",
         },
         "form": {
             "name": "Name",

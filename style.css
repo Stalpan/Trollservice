@@ -413,6 +413,13 @@ a { color: var(--green-dark); }
 
 .fact-value { font-weight: 600; }
 
+a.fact-value {
+  color: var(--green-dark);
+  text-decoration: none;
+}
+
+a.fact-value:hover { text-decoration: underline; }
+
 .fact-muted { color: var(--ink-soft); font-weight: 500; }
 
 /* ---------- Contact form ---------- */
