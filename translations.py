@@ -1,25 +1,25 @@
 # -*- coding: utf-8 -*-
-"""Copy for the Trollservice landing page. 'sv' = Swedish (primary), 'en' = English."""
+"""Copy for the TrollService landing page. 'sv' = Swedish (primary), 'en' = English."""
 
 TRANSLATIONS = {
     "sv": {
         "meta": {
-            "title": "Trollservice – Trädgårdsskötsel & husfix i Högsby",
+            "title": "TrollService – Trädgårdsskötsel & husfix i Högsby",
             "description": (
-                "Trollservice i Högsby: skötsel av grönytor och mindre husfix – "
+                "TrollService i Högsby: skötsel av grönytor och mindre husfix – "
                 "klippning, beskärning, röjning, målning och småfix inne och ute."
             ),
         },
-        "brand": "Trollservice",
+        "brand": "TrollService",
         "nav": {"services": "Tjänster", "about": "Om oss", "contact": "Kontakt"},
         "nav_label": "Huvudmeny",
         "skip": "Hoppa till innehåll",
         "lang": {"label": "Språk", "sv": "SV", "en": "EN"},
         "hero": {
             "kicker": "Högsby med omnejd",
-            "title": "Trygg hjälp för din trädgård",
+            "title": "TrollService",
             "sub": (
-                "Trollservice är ett lokalt företag som tar hand om din trädgård "
+                "TrollService är ett lokalt företag som tar hand om din trädgård "
                 "och ditt hus – snabbt, personligt och till ett schysst pris."
             ),
             "cta": "Begär offert",
@@ -62,7 +62,7 @@ TRANSLATIONS = {
         "about": {
             "title": "Lokalt företag, personlig service",
             "text": (
-                "Trollservice är en enskild firma som startade hösten 2025 i Högsby. "
+                "TrollService är en enskild firma som startade hösten 2025 i Högsby. "
                 "Verksamheten utför trädgårdsskötsel och mindre husfix, inne och ute. "
                 "Du pratar alltid direkt med den som gör jobbet – inga mellanhänder, "
                 "inga överraskningar. Välkommen! /Tomas"
@@ -84,7 +84,7 @@ TRANSLATIONS = {
             "message": "Meddelande",
             "message_placeholder": "Beskriv gärna vad du vill ha hjälp med …",
             "submit": "Skicka meddelande",
-            "subject": "Trollservice – kontaktformulär",
+            "subject": "TrollService – kontaktformulär",
             "note": "Vi svarar vanligtvis inom ett par dagar.",
         },
         "errors": {
@@ -95,27 +95,27 @@ TRANSLATIONS = {
         "sent": "Tack! Ditt meddelande har tagits emot – vi hör av oss snart.",
         "footer": {
             "note": "Trädgårdsskötsel · Husfix · Högsby",
-            "rights": "Allt innehåll © 2026 Trollservice.",
+            "rights": "Allt innehåll © 2026 TrollService.",
         },
     },
     "en": {
         "meta": {
-            "title": "Trollservice – Garden care & home fixes in Högsby",
+            "title": "TrollService – Garden care & home fixes in Högsby",
             "description": (
-                "Trollservice in Högsby: garden care and home fixes – "
+                "TrollService in Högsby: garden care and home fixes – "
                 "mowing, pruning, clearing, small painting jobs and repairs, indoors and out."
             ),
         },
-        "brand": "Trollservice",
+        "brand": "TrollService",
         "nav": {"services": "Services", "about": "About", "contact": "Contact"},
         "nav_label": "Main navigation",
         "skip": "Skip to content",
         "lang": {"label": "Language", "sv": "SV", "en": "EN"},
         "hero": {
             "kicker": "Högsby & surrounding areas",
-            "title": "Reliable help for your garden",
+            "title": "TrollService",
             "sub": (
-                "Trollservice is a local business that looks after your garden "
+                "TrollService is a local business that looks after your garden "
                 "and your home – quick, personal service at a fair price."
             ),
             "cta": "Request a quote",
@@ -158,7 +158,7 @@ TRANSLATIONS = {
         "about": {
             "title": "Local business, personal service",
             "text": (
-                "Trollservice is a sole proprietorship founded in autumn 2025 in "
+                "TrollService is a sole proprietorship founded in autumn 2025 in "
                 "Högsby. The business covers garden care and small home fixes, "
                 "indoors and out. You always talk directly to the person doing "
                 "the work – no middlemen, no surprises. Welcome! /Tomas"
@@ -180,7 +180,7 @@ TRANSLATIONS = {
             "message": "Message",
             "message_placeholder": "Tell us what you would like help with …",
             "submit": "Send message",
-            "subject": "Trollservice – contact form",
+            "subject": "TrollService – contact form",
             "note": "We usually reply within a couple of days.",
         },
         "errors": {
@@ -191,7 +191,7 @@ TRANSLATIONS = {
         "sent": "Thank you! Your message has been received – we will be in touch soon.",
         "footer": {
             "note": "Garden care · Home fixes · Högsby",
-            "rights": "All content © 2026 Trollservice.",
+            "rights": "All content © 2026 TrollService.",
         },
     },
 }
